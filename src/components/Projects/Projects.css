@@ -19,57 +19,40 @@
 .project-card {
   display: grid;
   grid-template-columns: 380px 1fr;
-
   background: var(--surface);
-
   border: 1px solid var(--border);
-
   border-radius: 20px;
-
   overflow: hidden;
-
   box-shadow: var(--shadow);
+  position: relative;
 
   transition:
     transform .35s ease,
     box-shadow .35s ease,
     border-color .35s ease;
-
-  position: relative;
 }
 
 .project-card:hover {
-
-  transform:
-    translateY(-12px);
+  transform: translateY(-12px);
 
   border-color: var(--primary);
 
   box-shadow:
     0 30px 70px rgba(59,130,246,.22);
-
 }
 
 .project-image {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
 
-  width:100%;
-
-  height:100%;
-
-  min-height:340px;
-
-  object-fit:cover;
-
-  transition:
-    transform .5s ease;
-
+  transition: transform .5s ease;
 }
 
-.project-card:hover .project-image{
-
-  transform:scale(1.05);
-  
-  }
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
 
 .project-content {
   padding: 35px;
@@ -77,204 +60,133 @@
 
 .project-content h3 {
   font-size: 2rem;
-
   margin-bottom: 18px;
 }
 
 .project-description {
   color: var(--text-light);
-
   line-height: 1.8;
-
   margin-bottom: 28px;
 }
 
 .project-content h4 {
   margin-top: 25px;
-
   margin-bottom: 15px;
-
   color: var(--primary);
-
   font-size: 1.1rem;
 }
 
 .badge-container {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 12px;
-
   margin-bottom: 20px;
 }
 
 .badge {
+  background: rgba(59,130,246,.10);
+  color: var(--primary);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: .9rem;
+  font-weight: 600;
 
-  background:rgba(59,130,246,.10);
-
-  color:var(--primary);
-
-  padding:8px 16px;
-
-  border-radius:999px;
-
-  font-size:.9rem;
-
-  font-weight:600;
-
-  transition:.3s;
-
+  transition:
+    background .3s ease,
+    color .3s ease,
+    transform .3s ease;
 }
-.badge:hover{
 
-  background:var(--primary);
-  
-  color:white;
-  
-  transform:translateY(-2px);
-  
-  }
+.badge:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.concept-list {
+  padding-left: 20px;
+  color: var(--text-light);
+  line-height: 1.9;
+}
 
 .project-buttons {
   margin-top: 30px;
-
   display: flex;
-
   gap: 18px;
-
   flex-wrap: wrap;
 }
 
 .github-btn,
 .demo-btn {
   padding: 14px 28px;
-
   border-radius: 12px;
-
   font-weight: 600;
+  text-decoration: none;
 
-  transition: .3s;
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
 }
 
 .github-btn {
   background: #24292e;
-
   color: white;
 }
 
 .demo-btn {
   background: linear-gradient(
-      135deg,
-      var(--primary),
-      var(--secondary)
+    135deg,
+    var(--primary),
+    var(--secondary)
   );
-
   color: white;
 }
 
 .github-btn:hover,
-.demo-btn:hover{
+.demo-btn:hover {
+  transform:
+    translateY(-4px)
+    scale(1.03);
 
-transform:
-translateY(-4px)
-scale(1.03);
-
-box-shadow:
-0 12px 30px rgba(59,130,246,.25);
-
+  box-shadow:
+    0 12px 30px rgba(59,130,246,.25);
 }
 
-@media (max-width:1000px){
+@media (max-width:1000px) {
 
-.project-card{
-
-grid-template-columns:1fr;
-
-}
-
-.project-image{
-
-height:260px;
-
-}
-
-}
-
-@media (max-width:768px){
-
-.projects{
-
-padding:80px 6%;
-
-}
-
-.project-content{
-
-padding:25px;
-
-}
-
-.project-content h3{
-
-font-size:1.6rem;
-
-}
-
-.project-buttons{
-
-justify-content:center;
-
-}
-
-.github-btn,
-.demo-btn{
-
-width:100%;
-
-text-align:center;
-
-}
-
-}
-.project-card::before{
-
-  content:"";
-  
-  position:absolute;
-  
-  inset:0;
-  
-  border-radius:20px;
-  
-  padding:1px;
-  
-  background:
-  linear-gradient(
-  135deg,
-  transparent,
-  rgba(59,130,246,.4),
-  transparent
-  );
-  
-  -webkit-mask:
-  linear-gradient(#fff 0 0) content-box,
-  linear-gradient(#fff 0 0);
-  
-  -webkit-mask-composite:xor;
-  
-  mask-composite:exclude;
-  
-  opacity:0;
-  
-  transition:.35s;
-  
-  pointer-events:none;
-  
+  .project-card {
+    grid-template-columns: 1fr;
   }
-  
-  .project-card:hover::before{
-  
-  opacity:1;
-  
+
+  .project-image {
+    height: 260px;
+    min-height: 260px;
   }
+
+}
+
+@media (max-width:768px) {
+
+  .projects {
+    padding: 80px 6%;
+  }
+
+  .project-content {
+    padding: 25px;
+  }
+
+  .project-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .project-buttons {
+    justify-content: center;
+  }
+
+  .github-btn,
+  .demo-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+}
