@@ -1,7 +1,6 @@
 import motor from "../assets/projects/dc-motor.png";
 import energy from "../assets/projects/energy-meter.png";
-import ai from "../assets/projects/ai-assistant.png";
-import robotic from "../assets/projects/robotic-hand.png";
+
 
 const projects = [
   {
