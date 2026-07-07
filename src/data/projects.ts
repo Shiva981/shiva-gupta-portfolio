@@ -1,5 +1,3 @@
-import motor from "../assets/projects/dc-motor.png";
-import energy from "../assets/projects/energy-meter.png";
 
 
 const projects = [
@@ -8,7 +6,7 @@ const projects = [
 
     status: "Completed",
 
-    image: motor,
+    image: "https://raw.githubusercontent.com/Shiva981/imagesofbackup/main/dc-motor.jpeg",
 
     description:
       "Designed and developed a DC motor speed control system for precise speed regulation using analog electronic components. The system enables smooth motor speed adjustment through voltage control and efficient power switching.",
@@ -35,7 +33,7 @@ const projects = [
 
     status: "Completed",
 
-    image: energy,
+    image: "https://raw.githubusercontent.com/Shiva981/imagesofbackup/main/energy-meter.jpeg",
 
     description:
       "Developed a smart energy monitoring system capable of measuring and tracking electrical parameters for efficient energy management.",
