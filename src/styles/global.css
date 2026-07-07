@@ -1,0 +1,94 @@
+body {
+  background: var(--bg);
+  color: var(--text);
+
+  transition:
+    background .35s ease,
+    color .35s ease;
+
+  position: relative;
+
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+
+  padding: 90px 8%;
+}
+
+.container {
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+.card {
+  background: var(--surface);
+
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+
+  border: 1px solid var(--border);
+
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+body::before {
+  content: "";
+
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(59,130,246,.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(59,130,246,.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 40px 40px;
+
+  animation: gridMove 25s linear infinite;
+
+  z-index: -1;
+}
+
+@keyframes gridMove {
+
+  from {
+    transform: translate(0,0);
+  }
+
+  to {
+    transform: translate(40px,40px);
+  }
+
+}
+
+body.dark::before {
+
+  background-image:
+    linear-gradient(
+      rgba(59,130,246,.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(59,130,246,.06) 1px,
+      transparent 1px
+    );
+
+}

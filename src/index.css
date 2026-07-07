@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+/* ================= THEME VARIABLES ================= */
+
+:root {
+  --background: #0f172a;
+  --surface: #1e293b;
+  --text: #ffffff;
+  --text-light: #cbd5e1;
+  --primary: #3b82f6;
+  --secondary: #06b6d4;
+  --border: rgba(255,255,255,0.08);
+  --shadow: 0 15px 40px rgba(0,0,0,.25);
+}
+
+body[data-theme="light"] {
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --text-light: #475569;
+  --primary: #2563eb;
+  --secondary: #0891b2;
+  --border: rgba(15,23,42,.08);
+  --shadow: 0 10px 30px rgba(15,23,42,.08);
+}
+
+/* Apply Theme */
+
+body {
+  background: var(--background);
+  color: var(--text);
+  transition: background .3s ease, color .3s ease;
+}
+
+/* Selection */
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 999px;
+}

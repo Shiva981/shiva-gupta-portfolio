@@ -1,0 +1,255 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+
+    <!-- Main Gradient -->
+    <linearGradient id="grad" x1="96" y1="96" x2="416" y2="416" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Node Glow -->
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+
+  </defs>
+
+  <g filter="url(#glow)">
+
+    <!-- PCB Base -->
+    <rect
+      x="92"
+      y="92"
+      width="328"
+      height="328"
+      rx="34"
+      stroke="url(#grad)"
+      stroke-width="4"
+    />
+
+    <!-- Inner PCB Glow -->
+    <rect
+      x="108"
+      y="108"
+      width="296"
+      height="296"
+      rx="24"
+      fill="url(#grad)"
+      opacity="0.05"
+    />
+
+    <!-- Main Integrated Circuit -->
+    <rect
+      x="186"
+      y="176"
+      width="140"
+      height="140"
+      rx="18"
+      stroke="url(#grad)"
+      stroke-width="4"
+    />
+
+    <!-- IC Pins -->
+    <g
+      stroke="url(#grad)"
+      stroke-width="3.5"
+      stroke-linecap="round"
+    >
+
+      <!-- Top -->
+      <path d="M206 176V154"/>
+      <path d="M236 176V154"/>
+      <path d="M256 176V154"/>
+      <path d="M286 176V154"/>
+      <path d="M306 176V154"/>
+
+      <!-- Bottom -->
+      <path d="M206 316V338"/>
+      <path d="M236 316V338"/>
+      <path d="M256 316V338"/>
+      <path d="M286 316V338"/>
+      <path d="M306 316V338"/>
+
+      <!-- Left -->
+      <path d="M164 196H186"/>
+      <path d="M164 226H186"/>
+      <path d="M164 256H186"/>
+      <path d="M164 286H186"/>
+
+      <!-- Right -->
+      <path d="M326 196H348"/>
+      <path d="M326 226H348"/>
+      <path d="M326 256H348"/>
+      <path d="M326 286H348"/>
+
+    </g>
+
+    <!-- PCB Copper Traces -->
+    <g
+      stroke="url(#grad)"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      opacity="0.9"
+    >
+
+      <!-- Top Left -->
+      <path d="M236 154V124H160V150"/>
+
+      <!-- Top Right -->
+      <path d="M286 154V122H362V160"/>
+
+      <!-- Bottom Left -->
+      <path d="M236 338V372H162V344"/>
+
+      <!-- Bottom Right -->
+      <path d="M286 338V378H356V350"/>
+
+      <!-- Left Side -->
+      <path d="M164 226H132V190"/>
+
+      <!-- Right Side -->
+      <path d="M348 256H388V314"/>
+
+      <!-- Internal Trace -->
+      <path d="M222 246H290"/>
+
+      <!-- Secondary Internal -->
+      <path d="M256 210V284"/>
+
+    </g>
+
+    <!-- Connection Nodes -->
+    <g>
+
+      <circle cx="160" cy="150" r="14" fill="url(#nodeGlow)" opacity="0.8"/>
+      <circle cx="362" cy="160" r="14" fill="url(#nodeGlow)" opacity="0.8"/>
+      <circle cx="162" cy="344" r="14" fill="url(#nodeGlow)" opacity="0.8"/>
+      <circle cx="356" cy="350" r="14" fill="url(#nodeGlow)" opacity="0.8"/>
+      <circle cx="132" cy="190" r="14" fill="url(#nodeGlow)" opacity="0.8"/>
+      <circle cx="388" cy="314" r="14" fill="url(#nodeGlow)" opacity="0.8"/>
+
+      <!-- Node Centers -->
+      <g fill="url(#grad)">
+        <circle cx="160" cy="150" r="5"/>
+        <circle cx="362" cy="160" r="5"/>
+        <circle cx="162" cy="344" r="5"/>
+        <circle cx="356" cy="350" r="5"/>
+        <circle cx="132" cy="190" r="5"/>
+        <circle cx="388" cy="314" r="5"/>
+      </g>
+
+    </g>
+
+    <!-- Resistors -->
+    <g
+      stroke="url(#grad)"
+      stroke-width="3.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+
+      <path d="M116 256H146"/>
+      <rect
+        x="146"
+        y="244"
+        width="42"
+        height="24"
+        rx="6"
+      />
+      <path d="M188 256H212"/>
+
+      <path d="M300 116V142"/>
+      <rect
+        x="288"
+        y="142"
+        width="24"
+        height="42"
+        rx="6"
+      />
+      <path d="M300 184V208"/>
+
+    </g>
+
+    <!-- Capacitors -->
+    <g
+      stroke="url(#grad)"
+      stroke-width="3"
+      stroke-linecap="round"
+    >
+
+      <!-- Left Capacitor -->
+      <path d="M118 324H142"/>
+      <path d="M150 308V340"/>
+      <path d="M162 308V340"/>
+      <path d="M162 324H186"/>
+
+      <!-- Right Capacitor -->
+      <path d="M330 390H354"/>
+      <path d="M362 374V406"/>
+      <path d="M374 374V406"/>
+      <path d="M374 390H396"/>
+
+    </g>
+
+    <!-- LEDs -->
+    <g
+      stroke="url(#grad)"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+
+      <!-- LED Body -->
+      <path d="M120 118L146 144"/>
+      <path d="M146 144L172 118"/>
+      <path d="M172 118V170H120V118"/>
+
+      <!-- Light Rays -->
+      <path d="M180 108L194 94"/>
+      <path d="M190 128H208"/>
+
+    </g>
+
+    <!-- Small Decorative PCB Details -->
+    <g
+      fill="url(#grad)"
+      opacity="0.75"
+    >
+      <circle cx="208" cy="246" r="3"/>
+      <circle cx="304" cy="246" r="3"/>
+      <circle cx="256" cy="210" r="3"/>
+      <circle cx="256" cy="284" r="3"/>
+    </g>
+
+    <!-- White Highlights -->
+    <g
+      stroke="white"
+      stroke-width="2"
+      stroke-linecap="round"
+      opacity="0.6"
+    >
+
+      <path d="M206 192H242"/>
+      <path d="M196 210V234"/>
+
+      <path d="M120 110L136 126"/>
+
+      <path d="M150 246H170"/>
+
+    </g>
+
+  </g>
+
+</svg>

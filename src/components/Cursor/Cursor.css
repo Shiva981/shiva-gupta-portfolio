@@ -1,0 +1,29 @@
+.cursor {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+
+  pointer-events: none;
+
+  z-index: 99999;
+
+  transform: translate(-50%, -50%);
+
+  box-shadow: 0 0 20px rgba(59,130,246,.5);
+
+  will-change: transform;
+}
+
+@media (max-width:768px){
+  .cursor{
+    display:none;
+  }
+}

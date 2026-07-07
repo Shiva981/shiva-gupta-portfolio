@@ -1,0 +1,34 @@
+.cursor-glow {
+  position: fixed;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(59,130,246,.18),
+    transparent 70%
+  );
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  will-change: transform;
+}
+
+body.dark .cursor-glow {
+  background: radial-gradient(
+    circle,
+    rgba(59,130,246,.22),
+    transparent 70%
+  );
+}
+
+@media (max-width:768px) {
+  .cursor-glow {
+    display: none;
+  }
+}
