@@ -18,11 +18,18 @@ function ProjectCard({ project }: Props) {
   return (
     <div className="project-card">
 
-      <img
-        src={project.image}
-        alt={project.title}
-        className="project-image"
-      />
+     <img
+  src={project.image}
+  alt={project.title}
+  className="project-image"
+  loading="lazy"
+  decoding="async"
+  draggable={false}
+  onError={(e) => {
+    console.error("Failed to load image:", project.image);
+    e.currentTarget.style.display = "none";
+  }}
+/>
 
       <div className="project-content">
 
