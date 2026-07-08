@@ -1,4 +1,6 @@
-
+import dcMotor from "../assets/images/projects/dc-motor.png";
+import energyMeter from "../assets/images/projects/energy-meter.png";
+import comingSoon from "../assets/images/projects/coming-soon.png";
 
 const projects = [
   {
@@ -6,7 +8,7 @@ const projects = [
 
     status: "Completed",
 
-    image: "https://raw.githubusercontent.com/Shiva981/imagesofbackup/main/dc-motor.jpeg",
+    image: dcMotor,
 
     description:
       "Designed and developed a DC motor speed control system for precise speed regulation using analog electronic components. The system enables smooth motor speed adjustment through voltage control and efficient power switching.",
@@ -33,7 +35,7 @@ const projects = [
 
     status: "Completed",
 
-    image: "https://raw.githubusercontent.com/Shiva981/imagesofbackup/main/energy-meter.jpeg",
+    image: energyMeter,
 
     description:
       "Developed a smart energy monitoring system capable of measuring and tracking electrical parameters for efficient energy management.",
@@ -61,8 +63,7 @@ const projects = [
 
     status: "In Progress",
 
-    image: "https://placehold.co/800x450/1e293b/ffffff?text=Coming+Soon",
-
+    image: comingSoon,
     description:
       "Working on an AI-integrated hardware assistant focused on combining intelligent automation with hardware interaction.",
 
@@ -89,7 +90,7 @@ const projects = [
 
     status: "In Progress",
 
-    image: "https://placehold.co/800x450/1e293b/ffffff?text=Coming+Soon",
+    image: comingSoon,
 
     description:
       "Developed a robotic hand prototype based on tendon-driven mechanisms for flexible and controlled robotic movement.",
