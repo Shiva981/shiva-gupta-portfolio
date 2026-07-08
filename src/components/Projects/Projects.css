@@ -164,31 +164,7 @@
 
 }
 
-@media (max-width:768px) {
 
-  .projects {
-    padding: 80px 6%;
-  }
-
-  .project-content {
-    padding: 25px;
-  }
-
-  .project-content h3 {
-    font-size: 1.6rem;
-  }
-
-  .project-buttons {
-    justify-content: center;
-  }
-
-  .github-btn,
-  .demo-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-}
 .projects,
 .projects * {
   opacity: 1 !important;
