@@ -2,6 +2,7 @@ import "./Projects.css";
 
 type Project = {
   title: string;
+  status: string;
   image: string;
   description: string;
   technologies: string[];
@@ -18,22 +19,30 @@ function ProjectCard({ project }: Props) {
   return (
     <div className="project-card">
 
-     <img
-  src={project.image}
-  alt={project.title}
-  className="project-image"
-  loading="lazy"
-  decoding="async"
-  draggable={false}
-  onError={(e) => {
-    console.error("Failed to load image:", project.image);
-    e.currentTarget.style.display = "none";
-  }}
-/>
+      <img
+        src={project.image}
+        alt={project.title}
+        className="project-image"
+        loading="lazy"
+        decoding="async"
+        draggable={false}
+        onError={(e) => {
+          console.error("Failed to load image:", project.image);
+          e.currentTarget.style.display = "none";
+        }}
+      />
 
       <div className="project-content">
 
         <h3>{project.title}</h3>
+
+        <span
+          className={`project-status 
+          ${project.status === "Completed"
+         ? "✓ Completed" : "🚧 In Progress"}`}
+        >
+          {project.status}
+        </span>
 
         <p className="project-description">
           {project.description}
@@ -43,7 +52,10 @@ function ProjectCard({ project }: Props) {
 
         <div className="badge-container">
           {project.technologies.map((tech) => (
-            <span key={tech} className="badge">
+            <span
+              key={tech}
+              className="badge"
+            >
               {tech}
             </span>
           ))}
@@ -53,7 +65,9 @@ function ProjectCard({ project }: Props) {
 
         <ul className="concept-list">
           {project.concepts.map((concept) => (
-            <li key={concept}>{concept}</li>
+            <li key={concept}>
+              {concept}
+            </li>
           ))}
         </ul>
 
