@@ -1,23 +1,16 @@
 import "./Projects.css";
 import ProjectCard from "./ProjectCard";
 import projects from "../../data/projects";
-import Reveal from "../Reveal/Reveal";
 
 function Projects() {
   return (
     <section className="projects" id="projects">
-      
       <div className="container">
-
-        <h2 className="section-title">
-          Featured Projects
-        </h2>
+        <h2 className="section-title">Featured Projects</h2>
 
         <p className="section-subtitle">
           A collection of engineering, embedded systems,
-          robotics, and AI automation projects that demonstrate
-          my practical skills and passion for building
-          intelligent solutions.
+          robotics, and AI automation projects.
         </p>
 
         <div className="projects-grid">
@@ -28,9 +21,7 @@ function Projects() {
             />
           ))}
         </div>
-
       </div>
-      
     </section>
   );
 }
