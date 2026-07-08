@@ -37,8 +37,8 @@ function App() {
   return (
     <>
       {/* <Cursor />
-*/}      <ScrollProgress />
-      {/*   <CursorGlow/> */}
+      <ScrollProgress />
+       <CursorGlow/> */}
       <Navbar />
 
       <Hero />
