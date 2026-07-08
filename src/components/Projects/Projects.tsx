@@ -6,7 +6,7 @@ import Reveal from "../Reveal/Reveal";
 function Projects() {
   return (
     <section className="projects" id="projects">
-      <Reveal>
+      
       <div className="container">
 
         <h2 className="section-title">
@@ -30,7 +30,7 @@ function Projects() {
         </div>
 
       </div>
-      </Reveal>
+      
     </section>
   );
 }
